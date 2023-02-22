@@ -1,7 +1,3 @@
-//TODO: Complete java docs and code in missing spots.
-//Missing spots are marked by < YOUR_CODE_HERE >.
-//Do NOT edit any other parts of the code.
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Comparator;
@@ -17,18 +13,11 @@ public class WindowStack {
 	/**
 	 * Defines ThreeTenLinkedList with the object window.
 	 */
-	//You'll need some instance variables probably...
-	//< YOUR_CODE_HERE >
 	ThreeTenLinkedList<Window> list;
 	/**
 	 * Constructor that initializes the linked list.
 	 */
 	public WindowStack() {
-		//Any initialization code you need.
-		
-		//O(1)
-		
-		//< YOUR_CODE_HERE >
 		
 		list = new ThreeTenLinkedList<Window>();
 	}
@@ -39,17 +28,6 @@ public class WindowStack {
 	public Node<Window> getHead() {
 		//Returns the head (top) of the stack of windows.
 		
-		//O(1)
-		
-		//We will use this method to test your
-		//linked list implementaiton of this
-		//class, so whether or not you are using
-		//the generic linked list class or bare
-		//nodes, you must still be able to return
-		//the appropriate head of the list.
-		
-		//< YOUR_CODE_HERE >
-		
 		return list.getHead(); //dummy return, replace this!
 	}
 	/**
@@ -58,17 +36,6 @@ public class WindowStack {
 	 */
 	public Node<Window> getTail() {
 		//Returns the tail (bottom) of the stack of windows.
-		
-		//O(1)
-		
-		//We will use this method to test your
-		//linked list implementaiton of this
-		//class, so whether or not you are using
-		//the generic linked list class or bare
-		//nodes, you must still be able to return
-		//the appropriate tail of the list.
-		
-		//< YOUR_CODE_HERE >
 		
 		return list.getTail(); //dummy return, replace this!
 	}
@@ -79,7 +46,6 @@ public class WindowStack {
 	public int numWindows() {
 		//Gets the number of windows in the stack.
 		
-		//O(1)
 		
 		return list.getSize();
 	}
@@ -91,15 +57,6 @@ public class WindowStack {
 	 */
 	public void add(Window r) {
 		//Add a window at the top of the stack.
-		
-		//O(1)
-		
-		//throw IllegalArgumentException for invalid windows
-		
-		//Note: the "top" of the stack should
-		//be the head of your linked list.
-		
-		//< YOUR_CODE_HERE >
 		
 		list.push(r);
 		if (list.getHead().next == null) {
@@ -125,56 +82,7 @@ public class WindowStack {
 	 */
 	public boolean handleClick (int x, int y, boolean leftClick) {
 		Node<Window> current = list.getHead();
-		//The mouse has been clicked at position (x,y).
-		//Left clicks are move windows to the top of the
-		//stack or pass the click on to the window at the
-		//top. Right clicks remove windows.
 		
-		//Returns true if the click was handled, false
-		//if no window was found.
-		
-		//O(n) where n is the number of windows in the stack
-		
-		
-		//Details:
-		
-		//Find the top-most window on the stack (if any)
-		//that contains the given coordinate.
-		
-		
-		//For a left click:
-		
-		//If the window is not at the top of the stack,
-		//move it to the top of the stack without
-		//disturbing the order of the other windows.
-		//Mark this window as the "selected" window (and
-		//ensure the previous selected window is no longer
-		//selected).
-		
-		//If the window is at the top of the stack already,
-		//ask the window to handle a click-event (using the
-		//Window's handleClick() method).
-		
-		//If none of the windows on the stack were clicked
-		//on, just return.
-		
-		
-		//For a right click:
-		
-		//Remove the window from the stack completely. The
-		//window at the top of the stack should be the 
-		//selected window.
-		
-		
-		//Hint #1: This would be a great time to use helper
-		//methods! If you just write one giant method...
-		//it'll be much harder to debug...
-		
-		//Hint #2: Make sure to use the methods you wrote
-		//in the Window class. Don't write those again!
-
-		
-		//< YOUR_CODE_HERE >
 		if (leftClick == true) {
 			
 			if (current == null) {
@@ -219,8 +127,6 @@ public class WindowStack {
 		}
 
 
-		
-		//dummy return, replace this!
 	}
 
 	/**
@@ -230,8 +136,6 @@ public class WindowStack {
 	 *  @return the iterator requested
 	 */
 	public Iterator<Window> windows() {
-		//Note that this method uses your linked list!
-		//so if the iterator doesn't work, that's on you...
 		
 		return new Iterator<>() {
 			/**
@@ -270,8 +174,6 @@ public class WindowStack {
 	 */
 	public void sortSize() {
 		//Sorts the windows in the stack by their area (length x width).
-		//MOST of this is done for you, but you still need to assign
-		//the returned head and tail back.
 		
 		//unselect the top window
 		this.getHead().data.setSelected(false);
@@ -288,11 +190,6 @@ public class WindowStack {
 		
 		//call the sort function with the comparator
 		ThreeTenLinkedList.NodePair<Window> ret = ThreeTenLinkedList.sort(pair, comp);
-		
-		//make the returned list the head and tail of this list
-		//this is for PART 5 of the project... don't try to do this
-		//before you complete ThreeTenLinkedList.sort()!
-		//< YOUR_CODE_HERE >
 		
 		list.setHead(ret.head);
 		list.setTail(ret.tail);
@@ -312,15 +209,6 @@ public class WindowStack {
 		//corner loction. Left things (bigger-X) are on top
 		//of right things (smaller-X). Tie-breaker: lower
 		//things (bigger-Y) top of  higher things (smaller-Y).
-
-		//This should use your ThreeTenLinkedList.sort() method you
-		//write in Part 5, so don't do this until you have (a) read
-		//part 5, (b) looked at the example in sortSize() above, and
-		//(c) are sure you understand comparators.
-		
-		//O(n^2)
-		
-		//< YOUR_CODE_HERE >
 		
 		this.getHead().data.setSelected(false);
 		
