@@ -1,4 +1,3 @@
-//TODO: Add JavaDocs ONLY. No other Editing.
 /**
  * Node class that defines multiple objects, which gives us our linked list formation.
  * @author William Nguyen
