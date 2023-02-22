@@ -69,8 +69,6 @@ public class Square {
 		//Returns whether or not a given x and y
 		//position are contained within this square.
 		
-		//< YOUR_CODE_HERE >
-		
 		//Note: upper left x and y are _inclusive_.
 		 
 		 
@@ -135,12 +133,7 @@ public class Square {
 	public void paint (Graphics g) {
 		//Draws a square on the graphics (g) using methods outlined in
 		//the project description.
-		
-		//You should draw a filled square-shaped-rectangle using
-		//the color of this square. You should then draw a black
-		//border in the same space.
-		
-		//< YOUR_CODE_HERE >
+	
 		g.setColor(color);
 		g.fillRect(upperLeftX, upperLeftY, size, size);
 		g.setColor(Color.black);
