@@ -1,16 +1,12 @@
-//TODO: Complete java docs and code in missing spots.
-//Missing spots are marked by < YOUR_CODE_HERE >.
-//Do NOT edit any other parts of the code.
+
 
 import java.awt.Color;
 import java.awt.Graphics;
 
 /**
  *  A single square in a window.
- *  
- *  <p>Adapterion of Nifty Assignment (http://nifty.stanford.edu/) by
- *  Mike Clancy in 2001. Original code by Mike Clancy. Updated Fall
- *  2022 by K. Raven Russell.</p>
+ *  Original code by Mike Clancy. 
+ *  Modified by William Nguyen.
  */
 public class Square {
 	/**
