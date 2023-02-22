@@ -1,7 +1,3 @@
-//TODO: Complete java docs and code in missing spots.
-//Missing spots are marked by < YOUR_CODE_HERE >.
-//Do NOT edit any other parts of the code.
-
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -12,11 +8,10 @@ import java.awt.RenderingHints;
 import java.util.Iterator;
 
 /**
+ *
  *  A single window (sub-window) being displayed in the window.
- *  
- *  <p>Adapterion of Nifty Assignment (http://nifty.stanford.edu/) by
- *  Mike Clancy in 2001. Original code by Mike Clancy. Updated Fall
- *  2022 by K. Raven Russell.</p>
+ *  Original code by Mike Clancy. 
+ *
  */
 public class Window {
 	/**
@@ -66,9 +61,6 @@ public class Window {
 	/**
 	 * A defined instance variable whether or not if a window is selected.
 	 */
-	//You need to save whether or not
-	//the window is selected somehow...
-	//< YOUR_CODE_HERE >
 	private boolean selected = false;
 
 	/**
@@ -97,7 +89,6 @@ public class Window {
 	 */
 	public void setSelected(boolean selected) {
 		//sets whether or not this window is currently selected
-		//< YOUR_CODE_HERE >
 		this.selected = selected;
 	}
 	/**
@@ -106,8 +97,7 @@ public class Window {
 	 */
 	public boolean getSelected() {
 		//gets whether or not this window is currently selected
-		//< YOUR_CODE_HERE >
-		return selected; //dummy return, replace this!
+		return selected; 
 	}
 	
 	/**
@@ -163,10 +153,6 @@ public class Window {
 	public boolean contains (int x, int y) {
 		//Returns whether or not a given x and y
 		//position are contained within this window.
-		
-		//< YOUR_CODE_HERE >
-		
-		//Note: upper left x and y are _inclusive_.
 		 
 		if (x >= upperLeftX && x <= upperLeftX + width && y >= upperLeftY && y <= upperLeftY + height) {
 			return true;
@@ -195,12 +181,7 @@ public class Window {
 
 	/**
 	 *  Determines which of this window's squares cover the pixel 
-	 *  coordinate (x,y). If there are any, remove them.  If there were
-	 *  none, add a square centered at (x,y) to this window's squares,
-	 *  making sure it doesn't extend outside the window.
-	 *  Note: this method assumes that this window contains
-	 *  the point (x,y). It does not try to handle invalid
-	 *  input outside the window.
+	 *  coordinate (x,y). I
 	 *  
 	 *  @param x the x of the position to investigate
 	 *  @param y the y of the position to investigate
